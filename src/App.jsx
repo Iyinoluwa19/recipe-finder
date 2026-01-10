@@ -6,7 +6,7 @@ function App() {
 
 
   return (
-    <div className="mx-6 my-4 bg-gray-100">
+    <div className="px-6 py-4 bg-gray-100 font-[sans-serif]">
       <Navbar />
       <RecipeCard />
     </div>
