@@ -6,11 +6,27 @@ export default function RecipeCard() {
         <div>
             {nigerianRecipes.map((recipe) => (
                 <div key={recipe.id}>
-                    <h2>{recipe.name}</h2>
-
-                {recipe.ingredients.map((ingredient, index) => (
-                    <li key={index}>{ingredient}</li>
-                ))}
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Recipe Name</th>
+                                <th>Region</th>
+                                <th>Difficulty</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{recipe.name}</td>
+                                <td>{recipe.region}</td>
+                                <td>{recipe.difficulty}</td>
+                            </tr>
+                            <tr>
+                                <td>{recipe.popular ? "✔️" : "❌"}</td>
+                                <td>{recipe.region}</td>
+                                <td>{recipe.difficulty}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             ))}
         </div>
