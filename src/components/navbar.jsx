@@ -1,10 +1,10 @@
 export default function Navbar() {
     return (
-        <nav >
-            <h1 className=" py-4 px-5 pb-px text-4xl font-semibold">Nigerian Dishes</h1>
+        <nav className="font-sans">
+            <h1 className=" py-4 px-5 pb-px text-4xl font-bold">Nigerian Dishes</h1>
             <p className="ml-5 pt-0 pb pb-2 text-gray-700 ">Filter and discover recipes</p>
 
-                <div className="bg-white px-5 text-gray-700 -mx-2 pl-6.5 text-xs rounded-2xl" >
+                {/* <div className="bg-white px-5 text-gray-700 -mx-2 pl-6.5 text-xs rounded-2xl" >
                     <div className="pt-4 pb-2">
                         <h3 className="text-[14px] text-gray-800 mb-2">Category</h3>
                         <button className="rounded-2xl bg-green-200 hover:bg-green-300 pl-3 pr-3 mr-3 text-gray-600 hover:text-gray-700">Soups</button>
@@ -28,7 +28,7 @@ export default function Navbar() {
                         <button className="rounded-2xl bg-green-200 hover:bg-green-300 pl-3 pr-3 mr-3 text-gray-600 hover:text-gray-700">South-South</button>
                         <button className="rounded-2xl bg-green-200 hover:bg-green-300 pl-3 pr-3 mr-3 text-gray-600 hover:text-gray-700">North</button>
                     </div>
-                </div>
+                </div> */}
         </nav>
     )
 }
