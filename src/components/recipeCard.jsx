@@ -1,4 +1,4 @@
-import { nigerianRecipes } from '../data/dishes.jsx';
+import { nigerianRecipes, nigerianBreakfast } from '../data/dishes.jsx';
 
 export default function RecipeCard() {
     console.log(nigerianRecipes);
@@ -6,24 +6,26 @@ export default function RecipeCard() {
         <div>
             {nigerianRecipes.map((recipe) => (
                 <div key={recipe.id}>
-                    <table>
+                    <table className='mb-5 mt-5 mx-auto'>
                         <thead>
-                            <tr>
-                                <th>Recipe Name</th>
-                                <th>Region</th>
-                                <th>Difficulty</th>
+                            <tr className='bg-gray-400'>
+                                <th className='border px-16'>Recipe Name</th>
+                                <th className='border px-16'>Region</th>
+                                <th className='border px-16'>Difficulty</th>
                             </tr>
-                        </thead>
-                        <tbody>
+                        </thead> 
+                        <tbody className='px-4'>
                             <tr>
-                                <td>{recipe.name}</td>
-                                <td>{recipe.region}</td>
-                                <td>{recipe.difficulty}</td>
+                                <td className='border'>{recipe.name}</td>
+                                <td className='border'>{nigerianRecipes[0].tags.map(( tag,index ) => (
+                                    <li key={index}>{tag}</li>
+                                ))}</td>
+                                <td className='border'>{recipe.difficulty}</td>
                             </tr>
-                            <tr>
-                                <td>{recipe.popular ? "✔️" : "❌"}</td>
-                                <td>{recipe.region}</td>
-                                <td>{recipe.difficulty}</td>
+                            <tr className='pb-3'>
+                                <td className='border'>{recipe.servings}</td>
+                                <td className='border'>{recipe.region}</td>
+                                <td className='border'>{recipe.difficulty}</td>
                             </tr>
                         </tbody>
                     </table>
